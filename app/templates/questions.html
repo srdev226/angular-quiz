@@ -1,0 +1,22 @@
+<div id="questions" class="carousel slide" data-interval="false">
+  <!-- Carousel items -->
+  <div class="carousel-inner">
+    <div class="item" ng-repeat="question in questions" ng-class="{active : $index==(questionNo-1)}">
+      <div class="row-fluid">
+        <div class="span12 question">
+          <h3>{{($index + 1)}}.) {{question.question}}</h3>
+          <label class="radio" ng-repeat="choice in question.choice">
+            <input type="radio" name="{{'choice_' + $index}}" value="{{choice}}" ng-change="selectAnswer(question, choice)" ng-model="question.selected">
+            {{choice}}
+          </label>
+        </div>
+      </div>
+      <div class="text-center" ng-show="$last">
+        <a ng-click="viewResults()" class="btn btn-primary">View Results</a>
+      </div>
+    </div>
+  </div>
+  <!-- Carousel nav -->
+  <a class="carousel-control left" href="#questions" data-slide="prev">&lsaquo;</a>
+  <a class="carousel-control right" href="#questions" data-slide="next">&rsaquo;</a>
+</div>

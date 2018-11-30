@@ -1,0 +1,10 @@
+/* app css stylesheet */
+
+.question {
+    padding-left: 30px;
+    padding-top: 20px;
+}
+
+.carousel-control {
+    top: 0;
+}

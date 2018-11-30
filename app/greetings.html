@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+<body ng-app>
+   <div ng-controller="GreetingController">
+    Type Greetings: <input type="text" ng-model="greetings"/> <br/>
+   </div>
+
+   <script src="lib/angular/angular.js"></script>
+
+   <script type="text/javascript">
+
+     function GreetingController($scope) {
+       $scope.greetings = 'Howdy';
+     }
+
+   </script>
+
+</body>
+</html>
